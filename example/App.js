@@ -22,6 +22,9 @@ const uiSchema = {
   signature: {
     'ui:widget': 'signature',
   },
+  media: {
+    'ui:widget': 'media',
+  },
 };
 
 export default () => {
@@ -60,7 +63,7 @@ export default () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16
+    padding: 16,
   },
   spacer: {
     height: 100,

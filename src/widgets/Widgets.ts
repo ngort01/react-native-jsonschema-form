@@ -6,6 +6,7 @@ import PasswordWidget from './PasswordWidget';
 import RadioWidget from './RadioWidget';
 import RangeWidget from './RangeWidget';
 import SignatureWidget from './SignatureWidget/SignatureWidget';
+import MediaPickerWidget from './MediaPickerWidget';
 
 export const Widgets = {
   TextWidget,
@@ -17,4 +18,5 @@ export const Widgets = {
   SelectWidget: RadioWidget,
   RangeWidget,
   signature: SignatureWidget,
+  media: MediaPickerWidget,
 };

@@ -96,6 +96,10 @@
             }
           ]
         },
+        "media": {
+          "type": "string",
+          "format": "data-url"
+        },
         "signature": {
           "type": "string",
           "format": "data-url"
