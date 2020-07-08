@@ -3,6 +3,18 @@
   "$ref": "#/definitions/Root",
   "title": "Example schema",
   "description": "Example schema description",
+  "required": [
+    "toggle",
+    "title",
+    "description",
+    "password",
+    "percentage",
+    "select",
+    "multiselect",
+    "array",
+    "advanced"
+  ],
+  "additionalProperties": false,
   "definitions": {
     "Root": {
       "type": "object",
@@ -83,20 +95,12 @@
               "additionalProperties": false
             }
           ]
+        },
+        "signature": {
+          "type": "string",
+          "format": "data-url"
         }
-      },
-      "required": [
-        "toggle",
-        "title",
-        "description",
-        "password",
-        "percentage",
-        "select",
-        "multiselect",
-        "array",
-        "advanced"
-      ],
-      "additionalProperties": false
+      }
     }
   }
 }

@@ -19,6 +19,9 @@ const uiSchema = {
   multiselect: {
     'ui:widget': 'checkboxes',
   },
+  signature: {
+    'ui:widget': 'signature',
+  },
 };
 
 export default () => {
