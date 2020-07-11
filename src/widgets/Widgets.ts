@@ -8,7 +8,7 @@ import RangeWidget from './RangeWidget';
 import EmailWidget from './EmailWidget';
 import URLWidget from './URLWidget';
 import SignatureWidget from './SignatureWidget/SignatureWidget';
-import MediaPickerWidget from './MediaPickerWidget';
+import MediaPickerWidget from './MediaPickerWidget/MediaPickerWidget';
 
 
 export const Widgets = {

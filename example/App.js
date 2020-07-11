@@ -25,6 +25,9 @@ const uiSchema = {
   media: {
     'ui:widget': 'media',
   },
+  media2: {
+    'ui:widget': 'media',
+  },
 };
 
 export default () => {
