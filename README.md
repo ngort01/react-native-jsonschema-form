@@ -4,22 +4,10 @@
 
 ```bash
 yarn add @rjsf/core rjsf-native
+
+# This package also depends on `@react-native-community/slider`
+yarn add @react-native-community/slider
 ```
-This package also depends on:
-
-* [@react-native-community/slider](https://github.com/react-native-community/react-native-slider)
-* [react-native-webview](https://github.com/react-native-community/react-native-webview) 
-* [react-native-image-crop-picker](https://github.com/ivpusic/react-native-image-crop-picker)
-
-Follow their instructions for installation
-
-```bash
-yarn add @react-native-community/slider react-native-webview react-native-image-crop-picker
-```
-
-## Development
-1. Run ```npm start``` in root folder to run the dev server
-2. ```cd example && npm run android``` to start the example app
 
 ## Usage
 ```typescript
@@ -48,7 +36,7 @@ const App = () => {
 };
 ```
 
-We also provide a Context as a form of overriding defaults
+We also provide a Context as a form of overriding defaults and theming
 
 ```typescript
 import ReactNativeForm, {defaultProps, FormContext} from 'rjsf-native';
@@ -62,6 +50,29 @@ const App = () => {
   )
 }
 ```
+
+### Form Context Props
+```typescript
+{
+  theme: {
+    primaryColor: string; // Your main theme color. Used for e.g. buttons
+    highlightColor: string; // Used for focused inputs, checked checkboxes, slider...
+    borderColor: string; // Color of textinput borders
+    textColor: string;
+    placeholderTextColor: string;
+    errorColor: string;
+    [propName: string]: any;
+  };
+  requiredTitle: string;
+  arrayAddTitle: string;
+  radioLabelMapping?: (label: string) => string;
+  [propName: string]: any;
+}
+```
+
+## Development
+1. Run ```npm start``` in root folder to run the dev server
+2. ```cd example && npm run android``` to start the example app
 
 ![](./docs/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-01-03%20at%2011.45.00.png) | ![](./docs/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-01-03%20at%2011.45.04.png)
 :-------------------------:|:-------------------------:

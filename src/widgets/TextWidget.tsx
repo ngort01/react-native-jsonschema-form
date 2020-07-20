@@ -24,12 +24,13 @@ const TextWidget = ({
                       secureEntry,
                       schema,
                       textContentType = 'none',
+                      rawErrors,
                     }: TextWidgetProps) => {
   const { theme } = useFormContext();
   const [ focused, setFocused ] = useState(false);
 
   const themedStyle = {
-    borderColor: focused ? theme.highlightColor : theme.borderColor,
+    borderColor: rawErrors?.length > 0 ? theme.errorColor : focused ? theme.highlightColor : theme.borderColor,
     borderWidth: focused ? 2 : 1,
     color: theme.textColor,
   };
@@ -56,6 +57,7 @@ const TextWidget = ({
         onFocus(id, value);
       } }
       selectionColor={ theme.highlightColor }
+      placeholderTextColor={ theme.placeholderTextColor }
       style={ [
         styles.input,
         themedStyle,

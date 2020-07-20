@@ -5,20 +5,22 @@ import { useFormContext } from '../FormContext';
 const TitleField = ({
                       title,
                       required,
+                      error,
                     }: {
   title?: string;
   required?: boolean;
+  error?: boolean;
 }) => {
   const { requiredTitle, theme } = useFormContext();
   return (
     <Text style={ [
         styles.title,
-        { color: theme.textColor },
+        { color: error ? theme.errorColor : theme.textColor },
       ] }
     >
       { title }
       {
-        required && <Text style={ { color: theme.requiredColor } }>{ requiredTitle }</Text>
+        required && <Text style={ { color: theme.errorColor } }>{ requiredTitle }</Text>
       }
     </Text>
   );
@@ -30,7 +32,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#333333',
     marginBottom: 5,
-    fontFamily: 'Roboto',
   },
 });
 
